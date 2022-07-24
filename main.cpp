@@ -2,16 +2,6 @@
 #include "data.h"
 #include "conmsgbox.h"
 
-
-
-
-
-
-
-
-
-
-
 #define NINJA
 #ifndef NINJA
 #include <iostream>
@@ -46,22 +36,6 @@ void perr()
 #define pause
 #define P(x)
 #endif
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #define MAX_SUB_DIR 3 // Maximum subdirectory name length (46 656 folders total)
 
@@ -104,13 +78,6 @@ int WINAPI wWinMain(
 	_In_		PWSTR cmd,			// Command line arguments
 	_In_		int show)			// Default user preference for ShowWindow()
 {
-	
-	//wchar_t cmd[] = L"C:\\ScienceDiscoverer\\PROGRAMZ\\Inkscape\\bin";
-
-
-
-
-
 #ifndef NINJA
 	AllocConsole();
 	FILE *s = freopen("CONIN$", "r", stdin);
@@ -263,9 +230,9 @@ retry:
 
 	quoteExePath(arg, path);
 	regSetRoot(HKEY_CLASSES_ROOT);
-	regSet(shell, L"", L"Файл у symlink до PATH");
-	regSet(shell_dir, L"", L"Папку у symlink до PATH");
-	regSet(shell_dir_back, L"", L"Папку у symlink до PATH");
+	regSet(shell, L"", L"File to PATH symlink");
+	regSet(shell_dir, L"", L"Folder to PATH symlink");
+	regSet(shell_dir_back, L"", L"Folder to PATH symlink");
 	regSet(shell, L"Extended");
 	regSet(shell_dir, L"Extended");
 	regSet(shell_dir_back, L"Extended");
